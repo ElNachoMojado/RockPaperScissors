@@ -2,6 +2,7 @@
 let win;
 let lose;
 
+
 //Stores value defined in <button> and passes it to round.
 function storeVal(el) {
     const amount = el.value;
@@ -10,26 +11,27 @@ function storeVal(el) {
 
 //Plays a round of the game, and stores and calculates score.
 function round(playSel) {
-    console.log(playSel);
     const comp = getComputerChoice();
 
     if (playSel === comp) {
-        console.log("This round is a tie. You both chose "+playSel+".");
+        document.getElementById('roundEnd').innerHTML = "This round is a tie. You both chose "+playSel+".";
     } else {
         if (playSel === 'Rock' && comp === 'Scissors') {
             win++;
-            console.log("You win this round. Your choice beats "+comp+".");
+            document.getElementById('roundEnd').innerHTML = "You win this round! "+playSel+" beats "+comp+".";
         } else if (playSel === 'Paper' && comp === 'Rock') {
             win++;
-            console.log("You win this round. Your choice beats "+comp+".");
+            document.getElementById('roundEnd').innerHTML = "You win this round! "+playSel+" beats "+comp+".";
         } else if (playSel === 'Scissors' && comp === 'Paper') {
             win++;
-            console.log("You win this round. Your choice beats "+comp+".");
+            document.getElementById('roundEnd').innerHTML = "You win this round! "+playSel+" beats "+comp+".";
         } else{
             lose++;
-            console.log("You lost this round. Your choice is weak against "+comp+".");
+            document.getElementById('roundEnd').innerHTML = "You lost this round. "+playSel+" is weak against "+comp+".";
         }
     }
+
+    document.getElementById('computer').innerHTML = 'Computer: '+comp;
 }
 
 //Gets random choice for computer.
@@ -46,6 +48,8 @@ function getComputerChoice () {
         return choice;
     }
 }
+
+
 
 /* function round (playSel, computer) {
     let cap = playSel.toUpperCase();
