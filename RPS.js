@@ -1,3 +1,38 @@
+//Needed to keep track of score.
+let win;
+let lose;
+
+//Stores value defined in <button> and passes it to round.
+function storeVal(el) {
+    const amount = el.value;
+    round(amount);
+}
+
+//Plays a round of the game, and stores and calculates score.
+function round(playSel) {
+    console.log(playSel);
+    const comp = getComputerChoice();
+
+    if (playSel === comp) {
+        console.log("This round is a tie. You both chose "+playSel+".");
+    } else {
+        if (playSel === 'Rock' && comp === 'Scissors') {
+            win++;
+            console.log("You win this round. Your choice beats "+comp+".");
+        } else if (playSel === 'Paper' && comp === 'Rock') {
+            win++;
+            console.log("You win this round. Your choice beats "+comp+".");
+        } else if (playSel === 'Scissors' && comp === 'Paper') {
+            win++;
+            console.log("You win this round. Your choice beats "+comp+".");
+        } else{
+            lose++;
+            console.log("You lost this round. Your choice is weak against "+comp+".");
+        }
+    }
+}
+
+//Gets random choice for computer.
 function getComputerChoice () {
     let random = Math.floor(Math.random() * 3 + 1);
     if (random === 1) {
@@ -12,7 +47,7 @@ function getComputerChoice () {
     }
 }
 
-function round (playSel, computer) {
+/* function round (playSel, computer) {
     let cap = playSel.toUpperCase();
     let player = cap.slice(0,1);
     let comp = computer.slice(0,1);
@@ -36,7 +71,7 @@ function round (playSel, computer) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+    //for (let i = 0; i < 5; i++) {
         let playSel = prompt("Input your option");
         let computer = getComputerChoice();
         round(playSel, computer);
@@ -53,10 +88,10 @@ function game() {
         } else if (i === 4 && lose === win) {
             console.log("In the end, it's a tie. Try again!")
         }
-    }
+    //}
     console.log("The score is W:"+win+" and L:"+lose+".");    
 }
 
 let win = 0;
 let lose = 0;
-console.log(game());
+console.log(game()); */
