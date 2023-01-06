@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+
+#pcDetails {
+    border: 5px solid black;
+    display: flex;
+}
+
+#playerDetails {
+    border: 5px solid black;
+    display: flex;
+}
+
+#buttons {
+    border: 5px solid black;
+}
+
+#arena {
+    border: 5px solid black;
+}
+
+#playerScore {
+    border: 5px solid black;
+}
+
+#roundEnd {
+    border: 5px solid black;
+}
+
+#pcScore {
+    border: 5px solid black;
+}
+
+#pcSelection {
+    border: 5px solid black;
+}

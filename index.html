@@ -5,17 +5,29 @@
         <title>
             RPS
         </title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         
-        <div id="messages">
-            <div id="computer"></div>
-            <div id="roundEnd"></div>
+        <div id="pcDetails">
+            <div id="pcScore"></div>
+            <div id="pcSelection"></div>
         </div>
 
-        <button class='btn' onclick="storeVal(this)" value="Rock">Rock</button>
-        <button class='btn' onclick="storeVal(this)" value="Paper">Paper</button>
-        <button class='btn' onclick="storeVal(this)" value="Scissors">Scissors</button>
+        <div id="arena">
+            <p>versus</p>
+        </div>
+
+        <div id="buttons">
+            <button class='btn' onclick="storeVal(this)" value="Rock">Rock</button>
+            <button class='btn' onclick="storeVal(this)" value="Paper">Paper</button>
+            <button class='btn' onclick="storeVal(this)" value="Scissors">Scissors</button>
+        </div>
+
+        <div id="playerDetails">
+            <div id="roundEnd"></div>
+            <div id="playerScore"></div>
+        </div>
 
 
         <script src="RPS.js" defer></script>

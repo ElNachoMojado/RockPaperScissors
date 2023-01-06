@@ -1,7 +1,6 @@
 //Needed to keep track of score.
-let win;
-let lose;
-
+let win = 0;
+let lose = 0;
 
 //Stores value defined in <button> and passes it to round.
 function storeVal(el) {
@@ -18,20 +17,38 @@ function round(playSel) {
     } else {
         if (playSel === 'Rock' && comp === 'Scissors') {
             win++;
+            document.getElementById('playerScore').innerHTML = 'Player score: '+win;
             document.getElementById('roundEnd').innerHTML = "You win this round! "+playSel+" beats "+comp+".";
         } else if (playSel === 'Paper' && comp === 'Rock') {
             win++;
+            document.getElementById('playerScore').innerHTML = 'Player score: '+win;
             document.getElementById('roundEnd').innerHTML = "You win this round! "+playSel+" beats "+comp+".";
         } else if (playSel === 'Scissors' && comp === 'Paper') {
             win++;
+            document.getElementById('playerScore').innerHTML = 'Player score: '+win;
             document.getElementById('roundEnd').innerHTML = "You win this round! "+playSel+" beats "+comp+".";
         } else{
             lose++;
+            document.getElementById('pcScore').innerHTML = "PC score: "+lose;
             document.getElementById('roundEnd').innerHTML = "You lost this round. "+playSel+" is weak against "+comp+".";
+        }
+
+        if (win === 5) {
+            alert("You've won!");
+            win = 0;
+            lose = 0;
+            document.getElementById('pcScore').innerHTML = "PC score: "+lose;
+            document.getElementById('playerScore').innerHTML = 'Player score: '+win;
+        } else if (lose === 5) {
+            alert("You've lost :(");
+            win = 0;
+            lose = 0;
+            document.getElementById('pcScore').innerHTML = "PC score: "+lose;
+            document.getElementById('playerScore').innerHTML = 'Player score: '+win;
         }
     }
 
-    document.getElementById('computer').innerHTML = 'Computer: '+comp;
+    document.getElementById('pcSelection').innerHTML = 'Computer: '+comp;
 }
 
 //Gets random choice for computer.
@@ -47,6 +64,12 @@ function getComputerChoice () {
         choice = 'Scissors';
         return choice;
     }
+}
+
+if (lose === 0 && win === 0) {
+    document.getElementById('pcScore').innerHTML = "PC score: "+lose;
+    document.getElementById('pcSelection').innerHTML = 'PC selection: ';   
+    document.getElementById('playerScore').innerHTML = 'Player score: '+win;
 }
 
 
