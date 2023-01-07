@@ -4,18 +4,21 @@ body {
     justify-content: space-evenly;
     margin: 0;
     min-height: 100vh;
+    background-color: #faeee7;
 }
 
 #pcDetails {
     display: flex;
     justify-content: space-between;
     flex: 1;
+    
 }
 
 #playerDetails {
     display: flex;
     height: 100%;
     flex: 1;
+    
 }
 
 #buttons {
@@ -26,12 +29,12 @@ body {
 }
 
 .btn {
-    padding: 35px;
-    border-color: red;
+    padding: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-    border-radius: 15px;
-    
+    border-radius: 5px;
+    border: 0;
+    background-color: #ff8ba7;
 }
 
 #arena {
@@ -41,21 +44,13 @@ body {
     align-items: center;
 }
 
-#playerChoice {
-    border: 5px solid black;
-}
-
-#pcChoice {
-    border: 5px solid black;
-}
-
 img {
     height: 120px;
-    width: auto;
+    width: 120px;
 }
 
 #playerScore {
-    border: 5px solid black;
+    border: 5px solid #272343;
     border-left: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 100px;
@@ -68,17 +63,19 @@ img {
 }
 
 #roundEnd {
-    border: 5px solid black;
+    border: 5px solid #272343;
     display: flex;
     flex: 1;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
 #pcScore {
-    border: 5px solid black;
+    border: 5px solid #272343;
     border-right: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 100px;
@@ -91,11 +88,27 @@ img {
 }
 
 #pcSelection {
-    border: 5px solid black;
+    border: 5px solid #272343;
     display: flex;
     flex: 1;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
     justify-content: center;
     align-items: center;
+}
+
+#footnote {
+    display: flex;
+    flex: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
 }
